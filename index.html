@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ustream4Free - Login</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="website-title">Ustream4Free.com</h1>
+        <div class="login-form">
+            <h2 class="my-website-text">My Website</h2>
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username">
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password">
+            </div>
+            <button id="loginButton">Login</button>
+        </div>
+        <div class="status-lights">
+            <div id="loginLight1" class="light red"></div> 
+            <div id="loginLight2" class="light red"></div> 
+            <div id="loginLight3" class="light green"></div> 
+        </div>
+        <p id="loginStatusText" class="status-message">Logged out</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
