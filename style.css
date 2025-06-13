@@ -1,0 +1,129 @@
+/* Ensure the body and html take up the full viewport height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    overflow: hidden; 
+    font-family: Arial, sans-serif; /* A basic font for readability */
+    color: #e0e0e0; /* Light text color for dark background */
+}
+
+body {
+    background-image: url('image.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    display: flex; /* Use flexbox to center the login container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Styles for the main login container */
+.login-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Green glow effect */
+    text-align: center;
+    max-width: 400px; /* Limit width */
+    width: 90%; /* Responsive width */
+    box-sizing: border-box; /* Include padding in width */
+    position: relative; /* For absolute positioning of internal elements if needed */
+}
+
+.website-title {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    color: #00ff00; /* Bright green for the title */
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+}
+
+.my-website-text {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #00ff00; /* Green for "My Website" */
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left; /* Align labels and inputs to the left */
+}
+
+.input-group label {
+    display: block; /* Make label appear on its own line */
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: #e0e0e0; /* Light grey for labels */
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 10px;
+    border: 1px solid #00ff00; /* Green border */
+    background-color: rgba(30, 30, 30, 0.9); /* Darker input background */
+    color: #00ff00; /* Green text in inputs */
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none; /* Remove default focus outline */
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="password"]:focus {
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.7); /* Glow on focus */
+}
+
+/* Login button styling */
+#loginButton {
+    background-color: #00ff00; /* Green background */
+    color: #000; /* Black text */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#loginButton:hover {
+    background-color: #00e600; /* Slightly darker green on hover */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.9);
+}
+
+/* Status Lights Styling */
+.status-lights {
+    display: flex; /* Arrange lights in a row */
+    justify-content: center; /* Center the lights horizontally */
+    align-items: center;
+    margin-top: 25px;
+    gap: 15px; /* Space between lights */
+}
+
+.light {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Makes it a circle */
+    border: 2px solid #333; /* Dark border for definition */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Smooth color change */
+}
+
+.light.red {
+    background-color: #ff0000; /* Red color for logged out */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+.light.green {
+    background-color: #00ff00; /* Green color for logged in/dev */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+/* Status message styling */
+.status-message {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #e0e0e0;
+}
